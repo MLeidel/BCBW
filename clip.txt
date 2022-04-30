@@ -1,0 +1,6 @@
+clips.txt
+
+
+
+StringComparison.OrdinalIgnoreCase)
+
