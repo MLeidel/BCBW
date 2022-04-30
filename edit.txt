@@ -1,1 +1,1 @@
-C:\Program Files\Notepad++\notepad++.exe
+notepad.exe

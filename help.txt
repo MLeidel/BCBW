@@ -1,15 +1,15 @@
-Help for "deskq"
+Help for "BCB"
 ================
 Windows version
 
-deskq is a GUI-Internet-search-window with added 
+BCB is a GUI-Internet-search-window with added
 productivity like clipboard archiving and retrieval,
 and custom command aliasing.
 
-To run: python deskq.pyw
+To run: python BCB.pyw
 
 These files must be present
-    in the DeskQ directory:
+    in the BCB directory:
 
     serv.txt    user defined commands
     hist.txt    record of searches
@@ -18,7 +18,7 @@ These files must be present
     urls.txt    list of saved URLs
     coor.txt    window position & size ...
     seaq.txt    URL query text
-    deskq.pyw   Python program
+    bcb.pyw   Python program
 
 
     To activate a command hit Enter or click action button
