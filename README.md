@@ -82,20 +82,20 @@ The entries in _serv.txt_ will take one of these forms:
 - system commands
 - website directed searches
 
-* ### Links and system commands  
-  Commands can be either URLs or system commands.  
+### serv.txt - Links and system commands  
+  Requests can be either URLs (links) or system commands.  
    
-  The general format is:
+  The general format for aliased commands and links is:
   
-  _command-you-will-type*, {URL | fullpath-command-line_}  
+  **_command-you-will-type, {URL | fullpath-command-line_}**  
   
   **Examples:**
   
-  ```
+  ```bash
       git,https://github.com 
-      dev,dev.sh
-      shutdown,  shutdown now
-      reboot,reboot 
+      dev, c:\batch\dev.cmd
+      shutdown, shutdown -s -t 000
+      reboot, shutdown -r -t 000
       drive, https://drive.google.com
   ```
   
@@ -133,7 +133,8 @@ The entries in _serv.txt_ will take one of these forms:
   how it formats their search querystring.**_  
   
   #### examples for the serv.txt file:  
-  ```
+  
+  ```bash
   a, Amazon, https://smile.amazon.com/s/ref=nb_sb_noss_1?field-keywords=
   
   i,Google Images,http://images.google.com/images?q= 
