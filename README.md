@@ -50,7 +50,7 @@ Below is a list of possibilities.
 |**sc** or _action button_|saves clipboard contents|
 |**list**|opens dialog with list of saved URLs|
 |**hist**|opens dialog with list of saved search texts|
-|**eval:**_maths_|places result in clipboard and search box|
+|**=**_2+2..._|calculator|
 |**cap**|toggles window caption bar|
 |**winset**|saves window size/position settings|
 |**eu**|edit saved URL list (urls.lst)|
@@ -59,7 +59,8 @@ Below is a list of possibilities.
 |**es**|edit custom command / services file (serv.txt)|
 |**ee**|edit name of your text editor|
 |**help**|view BCB help notes|
-|**up/down arrow** keys|recall last 10 commands or search text|
+|**up/down arrow**|recall last 10 entries|
+|**u:**_URL.._|opens a url in browser|
 
 ---
 

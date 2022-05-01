@@ -26,6 +26,7 @@ b_deco = False  # global for captions (use cap and winset to change)
 b_topm = True   # global for z-order (use top and winset to change)
 leng = 25       # default length of entry
 MAXHIST = 10    # entry history limit (ehist.txt)
+t = None        # global for toplevel windows
 # maxurls = 100 l # set a limit for too many URLS
 # ############
 
@@ -307,20 +308,21 @@ class Application(Frame):
         # self.hislst.pop()
         # self.inx = MAXHIST
 
+
+    def onTopClose(self, key=None):
+        ''' Close the toplevel window '''
+        t.destroy()
+        t.update()
+
     def onHistView(self):
         ''' Launch new window with listbox and hist.txt contents '''
+        global t
         t = Toplevel(self)
         t.wm_title("Search History")
         t.geometry("400x300") # WxH+left+top
         # l = Label(t, text="This is hist window")
         t.config(bg='#333333')
-
-        def onHistClose(self):
-            ''' Close the hist window '''
-            t.destroy()
-            t.update()
-
-        t.bind("<Escape>", onHistClose)
+        t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
@@ -341,21 +343,17 @@ class Application(Frame):
         idx = sender.curselection()
         value = sender.get(idx)
         webbrowser.open(self.searchquery + value)
+        self.onTopClose()
 
 
     def onListView(self):
         ''' Launch new window with listbox of saved URLs '''
+        global t
         t = Toplevel(self)
         t.wm_title("BCB Saved URLs")
         t.geometry("400x300") # WxH+left+top
         t.config(bg='#333333')
-
-        def onListClose(self):
-            ''' close the list window '''
-            t.destroy()
-            t.update()
-
-        t.bind("<Escape>", onListClose)
+        t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
@@ -380,21 +378,16 @@ class Application(Frame):
         except:
             pass
         webbrowser.open(value)
-
+        self.onTopClose()
 
     def onServView(self):
         ''' Launch new window with listbox of saved URLs '''
+        global t
         t = Toplevel(self)
         t.wm_title("BCB User Commands")
         t.geometry("400x300") # WxH+left+top
         t.config(bg='#333333')
-
-        def onServClose(self):
-            ''' close the list window '''
-            t.destroy()
-            t.update()
-
-        t.bind("<Escape>", onServClose)
+        t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
@@ -420,6 +413,7 @@ class Application(Frame):
         value = lstv[0].strip()
         self.set_text(value)
         self.process_events(None)
+        self.onTopClose()
 
 
     def open_editor(self, fin):

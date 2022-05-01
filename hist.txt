@@ -15,3 +15,4 @@ ex, 11/04/20
 download epson scanner software, 11/06/20
 https://tinyurl.com/y3dm3h86, 11/15/20
 pandas df.info(), 11/16/20
+eval:2+2, 05/01/22

@@ -2,11 +2,13 @@ Help for "BCB"
 ================
 Windows version
 
+Browse & Command Bar
+=        =       =
 BCB is a GUI-Internet-search-window with added
 productivity like clipboard archiving and retrieval,
 and custom command aliasing.
 
-To run: python BCB.pyw
+To run: python bcb.pyw
 
 These files must be present
     in the BCB directory:
@@ -18,11 +20,12 @@ These files must be present
     urls.txt    list of saved URLs
     coor.txt    window position & size ...
     seaq.txt    URL query text
-    bcb.pyw   Python program
+    bcb.pyw     Python program
 
 
-    To activate a command hit Enter or click action button
-    Note: You can drag & drop text into the Entry box as well.
+    	After entering a search query, URL, or command
+	hit Enter or click the button to activate.
+
 
 	1. Enter URL (or URL in clipboard)
 	----> saves URL to "urls.lst" file
@@ -60,21 +63,16 @@ These files must be present
 	9. "u:" & URL
 	----> opens URL in browser
 		
-	10. "ex:" & local executable
-	----> run the executable
-
-	11. "top"
+	10. "top"
 	----> toggles the "window" topmost status
 
-	12. "winset"
+	11. "winset"
 	----> saves the current window position, size,
 		and decoration status
 
-	13. up arrow or down arrow
-	----> puts last command into the entry field
+	12. up arrow & down arrow
+	----> traverse last 10 command history
 
-    14. "I feel lucky search"
-    ----> start search with ">" character
 
     Other commands:
     "eu"    edit the urls.lst file
