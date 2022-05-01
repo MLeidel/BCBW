@@ -9,6 +9,7 @@ ff,         C:\Program Files\Mozilla Firefox\firefox.exe
 mso,        https://www.office.com/?auth=1
 office,     https://www.office.com/?auth=1
 shutdown,   shutdown -s -t 000
+reboot,		shutdown -r -t 000
 --- SERVICES ---
 a,Amazon,https://smile.amazon.com/s/ref=nb_sb_noss_1?field-keywords=
 m,Google Maps,https://www.google.com/maps/search/

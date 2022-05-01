@@ -1,10 +1,10 @@
+cap
+hist
+list
+list
+winset
+cap
+cap
 help
 ee
 es
-hist
-x
-x
-hist
-list
-extract a substring with python
-download sublime-text for windows

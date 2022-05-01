@@ -449,7 +449,7 @@ os.chdir(os.path.dirname(p))
 lcoor = tuple(open("coor.txt", 'r'))  # no relative path for this
 leng = int(lcoor[4])
 root.geometry('+%d+%d'%(int(lcoor[0].strip()), int(lcoor[1].strip())))
-root.title("dq")
+root.title("BCB")
 root.iconphoto(False, PhotoImage(file='icon.png'))
 if int(lcoor[2]) == 0:
     b_deco = False
