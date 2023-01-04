@@ -116,6 +116,7 @@ Descq uses the DuckDuckGo search engine as default.
 Edit "seaq.txt" (ee command) to change it to
 some other URL such as:
     https://www.google.com/search?q=
+    https://search.brave.com/search?q=
     https://duckduckgo.com/?q=
     https://www.bing.com/search?q=
     https://scholar.google.com/scholar?q=

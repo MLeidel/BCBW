@@ -16,3 +16,5 @@ download epson scanner software, 11/06/20
 https://tinyurl.com/y3dm3h86, 11/15/20
 pandas df.info(), 11/16/20
 eval:2+2, 05/01/22
+install bleachbit for windows 11, 12/28/22
+how to execute onlyoffice from command line, 12/28/22

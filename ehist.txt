@@ -1,10 +1,10 @@
-cap
 hist
 list
 list
+hist
+hist
+list
+hist
+hist
 winset
 cap
-cap
-help
-ee
-es

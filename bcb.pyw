@@ -9,18 +9,14 @@ import requests
 import subprocess
 import os
 from tkinter import *
+from tkinter.ttk import *  # defaults all widgets as ttk
+from ttkthemes import ThemedTk  # module applied to all widgets
 from time import strftime
 import requests
 from urllib.parse import quote
 
 # ############ GUI COLORS
-g_w_bg = "#222"     # Window background
-g_e_bg = "#999"     # Entry background
-g_e_fg = "black"    # Entry foreground
 g_e_font = "Consolas 10 bold"  # Entry font
-g_e_cur = "#333"    # Entry cursor color
-g_b_fg = "#ccc"     # Button foreground
-g_b_bg = "#363636"  # Button background
 # ############ GLOBALS
 b_deco = False  # global for captions (use cap and winset to change)
 b_topm = True   # global for z-order (use top and winset to change)
@@ -41,7 +37,6 @@ class Application(Frame):
     def __init__(self, parent):
         Frame.__init__(self, parent)
         self.pack(fill=BOTH, expand=True, padx=0, pady=0)
-        self.config(bg=g_w_bg)
         self.last_command = ""
         self.create_widgets()
         self.entry1.focus()
@@ -53,21 +48,17 @@ class Application(Frame):
         self.inx = MAXHIST
         self.hislst = []
 
-        self.entry1 = Entry(self, relief=FLAT,
-                            bg=g_e_bg, fg=g_e_fg, font=g_e_font)
+        self.entry1 = Entry(self, font=g_e_font)
         self.entry1.grid(row=1, column=1, padx=(6, 3))
         self.entry1.bind('<Return>', self.process_events)
         self.entry1.bind('<Tab>', self.process_events)
         # blank the entry box with Esc key
         self.entry1.bind('<Escape>', self.clear_entry)
-        self.entry1.config(insertbackground=g_e_cur)
         self.entry1.configure(width=leng)
         self.entry1.bind("<Up>", self.up_arrow)
         self.entry1.bind("<Down>", self.down_arrow)
 
         self.btnsave = Button(self, text='■', command=self.saveFromClip,
-                              bg=g_b_bg, fg=g_b_fg, relief=FLAT,
-                              font=('Sans', '12', 'bold'),
                               width=2)
         self.btnsave.grid(row=1, column=2, padx=(3, 6), pady=2)
 
@@ -320,12 +311,12 @@ class Application(Frame):
         t = Toplevel(self)
         t.wm_title("Search History")
         t.geometry("400x300") # WxH+left+top
+        t.iconbitmap("icon.ico")
         # l = Label(t, text="This is hist window")
-        t.config(bg='#333333')
         t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
-        l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
+        l = Listbox(t, yscrollcommand=sbar.set)
         f_hand = open("hist.txt", "r")
         items = f_hand.readlines()
         items.reverse()
@@ -352,11 +343,11 @@ class Application(Frame):
         t = Toplevel(self)
         t.wm_title("BCB Saved URLs")
         t.geometry("400x300") # WxH+left+top
-        t.config(bg='#333333')
+        t.iconbitmap("icon.ico")
         t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
-        l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
+        l = Listbox(t, yscrollcommand=sbar.set)
         f_hand = open("urls.txt", "r")
         items = f_hand.readlines()
         f_hand.close()
@@ -386,11 +377,11 @@ class Application(Frame):
         t = Toplevel(self)
         t.wm_title("BCB User Commands")
         t.geometry("400x300") # WxH+left+top
-        t.config(bg='#333333')
+        t.iconbitmap("icon.ico")
         t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
-        l = Listbox(t, yscrollcommand=sbar.set, bg='#444', fg='white')
+        l = Listbox(t, yscrollcommand=sbar.set)
         f_hand = open("serv.txt", "r")
         items = f_hand.readlines()
         f_hand.close()
@@ -432,8 +423,8 @@ class Application(Frame):
 
 # END OF Application class
 
-
-root = Tk()
+styl = open("style").read().strip()
+root = ThemedTk(theme=styl)
 
 # change working directory to path for this file
 p = os.path.realpath(__file__)
@@ -458,5 +449,6 @@ else:
     b_topm = True
     root.attributes("-topmost", True)  # on top
 
+root.iconbitmap("icon.ico")
 app = Application(root)
 app.mainloop()
