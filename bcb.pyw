@@ -1,6 +1,6 @@
 '''
 bcb.py
-Windows version of BCB
+Windows version of descq
 Uses tkinter instead of Gtk
 July 2021
 '''
@@ -194,9 +194,12 @@ class Application(Frame):
             with open("edit.txt", "r") as f_hand:
                 self.editor = f_hand.readline().strip()
 
-        elif stext.lower().startswith("@"):  # execute a windows command
+        elif stext[0] in "$>@":  # system command or URL
             stext = stext[1:]
-            os.system(stext)
+            if stext.startswith("http"):  # browse URL
+                webbrowser.open(stext)
+            else:
+                os.system(stext)  # execute a windows command
 
         elif stext.lower() == "help" or stext.lower() == "about":
             self.open_editor("help.txt")
@@ -316,7 +319,7 @@ class Application(Frame):
         t.bind("<Escape>", self.onTopClose)
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
-        l = Listbox(t, yscrollcommand=sbar.set)
+        l = Listbox(t, yscrollcommand=sbar.set, exportselection=0)
         f_hand = open("hist.txt", "r")
         items = f_hand.readlines()
         items.reverse()

@@ -61,6 +61,7 @@ These files must be present
 		your desired position on the desktop
 
 	9. "u:" & URL
+		or ">|@|$"http..."
 	----> opens URL in browser
 		
 	10. "top"
