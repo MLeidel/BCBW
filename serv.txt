@@ -1,19 +1,19 @@
 --- COMMANDS ---
 amazon, https://www.amazon.com
 baidu, https://www.baidu.com/
-brave, start brave.exe
-calculator, start win32calc.exe
+brave, c:\windows\System32\cmd.exe /C start brave.exe
+calculator, c:\windows\System32\cmd.exe /C start win32calc.exe
 calendar, https://calendar.google.com/calendar/r?pli=1
 contacts, https://contacts.google.com
 coursera, https://www.coursera.org/
 drive Google,https://drive.google.com/drive/my-drive?ths=true
 drivers, https://www.iobit.com/en/driver-booster.php
-edge, start edge
+edge, c:\windows\System32\cmd.exe /C start edge
 edit, notepad.exe untitled
-excel, start excel.exe
+excel, c:\windows\System32\cmd.exe /C start excel.exe
 facebook, https://www.facebook.com/messenger/
-ff, start firefox.exe
-firefox, start firefox.exe
+ff, c:\windows\System32\cmd.exe /C start firefox.exe
+firefox, c:\windows\System32\cmd.exe /C start firefox.exe
 git, https://github.com
 google, https://www.google.com/
 instagram, https://www.instagram.com/
@@ -21,7 +21,7 @@ irfanview, https://www.irfanview.com/
 mso, https://www.office.com/?auth=1
 netflix, https://www.netflix.com/
 office, https://www.office.com/?auth=1
-paint, start mspaint.exe
+paint, c:\windows\System32\cmd.exe /C start mspaint.exe
 qq, https://www.qq.com/
 reboot, shutdown -r -t 000
 reddit, https://www.reddit.com/
@@ -30,8 +30,8 @@ stackoverflow, https://stackoverflow.com/
 taobao, https://www.taobao.com/
 twitter, https://twitter.com/
 wikipedia, https://www.wikipedia.org/
-wmplayer, start wmplayer
-word, start winword.exe
+wmplayer, c:\windows\System32\cmd.exe /C start wmplayer
+word, c:\windows\System32\cmd.exe /C start winword.exe
 yahoo, https://www.yahoo.com/
 youtube, https://www.youtube.com/
 zoom, https://zoom.us/
