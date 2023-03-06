@@ -1,15 +1,40 @@
 --- COMMANDS ---
-brave,      C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
-calendar,   https://calendar.google.com/calendar/r?pli=1
-contacts,   https://contacts.google.com
+amazon, https://www.amazon.com
+baidu, https://www.baidu.com/
+brave, start brave.exe
+calculator, start win32calc.exe
+calendar, https://calendar.google.com/calendar/r?pli=1
+contacts, https://contacts.google.com
+coursera, https://www.coursera.org/
 drive Google,https://drive.google.com/drive/my-drive?ths=true
-git,        https://github.com
-edit,       notepad.exe untitled
-ff,         C:\Program Files\Mozilla Firefox\firefox.exe
-mso,        https://www.office.com/?auth=1
-office,     https://www.office.com/?auth=1
-shutdown,   shutdown -s -t 000
-reboot,		shutdown -r -t 000
+drivers, https://www.iobit.com/en/driver-booster.php
+edge, start edge
+edit, notepad.exe untitled
+excel, start excel.exe
+facebook, https://www.facebook.com/messenger/
+ff, start firefox.exe
+firefox, start firefox.exe
+git, https://github.com
+google, https://www.google.com/
+instagram, https://www.instagram.com/
+irfanview, https://www.irfanview.com/
+mso, https://www.office.com/?auth=1
+netflix, https://www.netflix.com/
+office, https://www.office.com/?auth=1
+paint, start mspaint.exe
+qq, https://www.qq.com/
+reboot, shutdown -r -t 000
+reddit, https://www.reddit.com/
+shutdown, shutdown -s -t 000
+stackoverflow, https://stackoverflow.com/
+taobao, https://www.taobao.com/
+twitter, https://twitter.com/
+wikipedia, https://www.wikipedia.org/
+wmplayer, start wmplayer
+word, start winword.exe
+yahoo, https://www.yahoo.com/
+youtube, https://www.youtube.com/
+zoom, https://zoom.us/
 --- SERVICES ---
 a,Amazon,https://smile.amazon.com/s/ref=nb_sb_noss_1?field-keywords=
 m,Google Maps,https://www.google.com/maps/search/
