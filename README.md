@@ -1,10 +1,6 @@
 
 # Browse & Command Bar (for Windows)
 
-
-### BCB is a desktop entry field that you position on your desktop. 
->_for those who would rather type than mouse around_
-
 This new desktop program for Windows is an incredibly useful tool 
 for users who need quick access to system applications, commands, 
 and internet queries. Writen in Python it uses little resources. 
