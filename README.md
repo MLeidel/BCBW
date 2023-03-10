@@ -3,7 +3,19 @@
 
 
 ### BCB is a desktop entry field that you position on your desktop. 
->_for those who would rather type commands than mouse around_
+>_for those who would rather type than mouse around_
+
+This new desktop program for Windows is an incredibly useful tool 
+for users who need quick access to system applications, commands, 
+and internet queries. Writen in Python it uses little resources. 
+This program gives users the ability to launch apps, system commands, 
+and internet queries right from the desktop, eliminating the need to 
+open a terminal or browser window to access them. The user creates simple 
+aliases for any task. The aliases can then be typed into the entry field 
+to execute the tasks. So it is easy to use and intuitive, 
+providing users with the ability to quickly access information without 
+having to navigate through multiple windows. 
+DescQ for Linux is a great way to save time and effort while increasing productivity.
 
 ---
 
@@ -18,7 +30,6 @@ Some features are:
 ## Installing BCB
 Python 3.5 or greater must be present on your system. 
 >https://www.python.org/downloads/windows/ 
-
 
 >>[install BCB (setup_BCBW.exe)](setup_BCBW.exe)
 

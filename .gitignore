@@ -154,3 +154,4 @@ cython_debug/
 # added by myself
 install/
 getmd.cmd
+wget.pyw
