@@ -62,13 +62,13 @@ class Application(Frame):
                               width=2)
         self.btnsave.grid(row=1, column=2, padx=(3, 6), pady=2)
 
-        with open("edit.txt", "r") as f_hand:
+        with open("edit.txt", "r", encoding='utf-8') as f_hand:
             self.editor = f_hand.readline().strip()
 
         with open("seaq.txt", "r") as f_hand:
             self.searchquery = f_hand.readline().strip()
 
-        with open("ehist.txt", "r") as f:
+        with open("ehist.txt", "r", encoding='utf-8') as f:
             self.hislst = f.readlines()
             self.hislst = [i.strip() for i in self.hislst]
 
@@ -114,7 +114,7 @@ class Application(Frame):
             self.hislst.pop()
             self.inx = MAXHIST
 
-        with open("serv.txt", "r") as fi:
+        with open("serv.txt", "r", encoding='utf-8') as fi:
             for srv in fi:
                 if srv.startswith(stext):  # tag
                     ary = srv.split(",")
@@ -150,7 +150,7 @@ class Application(Frame):
 
         elif len(stext) > 1 and stext[1] == ':':
             # try to locate the service from the serv.txt file
-            with open("serv.txt", "r") as fi:
+            with open("serv.txt", "r", encoding='utf-8') as fi:
                 for srv in fi:
                     if srv.startswith(stext[:1]):
                         ary = srv.split(",")
@@ -282,7 +282,7 @@ class Application(Frame):
 
     def writeurl(self, sline):
         ''' writes a line to the top of urls.txt file '''
-        f_hand = open("urls.txt", "r")
+        f_hand = open("urls.txt", "r", encoding='utf-8')
         hold = f_hand.readlines()
         f_hand.close()
 
@@ -320,7 +320,7 @@ class Application(Frame):
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set, exportselection=0)
-        f_hand = open("hist.txt", "r")
+        f_hand = open("hist.txt", "r", encoding='utf-8')
         items = f_hand.readlines()
         items.reverse()
         f_hand.close()
@@ -351,7 +351,7 @@ class Application(Frame):
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set)
-        f_hand = open("urls.txt", "r")
+        f_hand = open("urls.txt", "r", encoding='utf-8')
         items = f_hand.readlines()
         f_hand.close()
         for inx, item in enumerate(items):
@@ -385,7 +385,7 @@ class Application(Frame):
         sbar = Scrollbar(t)
         sbar.pack(side=RIGHT, fill=Y)
         l = Listbox(t, yscrollcommand=sbar.set)
-        f_hand = open("serv.txt", "r")
+        f_hand = open("serv.txt", "r", encoding='utf-8')
         items = f_hand.readlines()
         f_hand.close()
         for inx, item in enumerate(items):
