@@ -155,3 +155,5 @@ cython_debug/
 install/
 getmd.cmd
 wget.pyw
+fixurls.py
+geturls.cmd
