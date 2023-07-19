@@ -152,7 +152,7 @@ class Application(Frame):
             # try to locate the service from the serv.txt file
             with open("serv.txt", "r", encoding='utf-8') as fi:
                 for srv in fi:
-                    if srv.startswith(stext[:1]):
+                    if srv.startswith(stext[0] + ','):
                         ary = srv.split(",")
                         webbrowser.open(ary[2] + stext[2:])
 

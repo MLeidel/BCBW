@@ -91,23 +91,22 @@ These files must be present
     (see services.csv for examples)
 
     Targeted web searches (services) must begin with one letter and a
-    colon (:) (see services.csv for examples)
+    colon (:) (see serv.txt for examples)
 
-    Here is the services.csv file that comes with the distribution:
+    Here is a sample serv.txt file:
 
-    ----COMMANDS----
-;git,https://github.com
-;greatcourses,https://www.thegreatcourses.com/
-;term,x-terminal-emulator
-;news,https://microsoftnews.msn.com
-;reboot,reboot
-----SERVICES----
+----COMMANDS----
+wmplayer, c:\windows\System32\cmd.exe /C start wmplayer
+word, c:\windows\System32\cmd.exe /C start winword.exe
+yahoo, https://www.yahoo.com/
+youtube, https://www.youtube.com/
+zoom, https://zoom.us/
+--- SERVICES ---
 a,Amazon,https://smile.amazon.com/s/ref=nb_sb_noss_1?field-keywords=
 m,Google Maps,https://www.google.com/maps/search/
 y,YouTube,https://www.youtube.com/results?search_query=
 i,Google Images,http://images.google.com/images?q=
-w,Wikipedia,https://en.wikipedia.org/w/index.php?title=Special:Searc. . . .
-p,Php,http://php.net/manual-lookup.php?pattern=
+w,Wikipedia,https://en.wikipedia.org/w/index.php?title=Special:Search&profile=default&fulltext=Search&search=
 
 =================================================================
 
